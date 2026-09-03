@@ -1,0 +1,4 @@
+# docs / assets repo — minimal ignores
+.DS_Store
+Thumbs.db
+*.log
