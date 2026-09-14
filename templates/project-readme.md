@@ -1,131 +1,130 @@
-# Project
+# Project Name
 
-One-line description of what this does and who it is for.
+One sentence describing what the project does and who it is for.
 
-> Status: `active` | `beta` | `maintenance` | `archived`
-> License: MIT
+> Status: `alpha` | `beta` | `stable` | `maintenance` | `archived`
+>
+> Scope: `<single primary responsibility>`
+>
+> License: `<SPDX identifier or Proprietary>`
 
-## Problem
+## Why it exists
 
-The problem, with enough context for a new reader to understand why
-this project exists. 2–5 sentences.
+Explain the problem and why this repository is the right boundary for solving
+it. State what the project is not.
 
-## Solution
+## Capabilities
 
-How this project solves the problem. What it is and what it is not.
+- Capability one — concrete behavior and output
+- Capability two — concrete behavior and output
+- Capability three — concrete behavior and output
 
-## Features
+Keep this list short. Link to documentation for the full surface. Do not list a
+planned feature as shipped.
 
-- Feature one — one line
-- Feature two — one line
-- Feature three — one line
+## How it fits into SKLab
 
-Keep the list short. Link to docs for the rest.
+```text
+upstream input → this project → verified downstream output
+```
+
+List required and optional SKLab integrations. The project must remain useful
+within its stated standalone boundary.
 
 ## Architecture
 
 ```text
 src/
-  api/        HTTP layer
-  core/       business logic
+  api/        public interface
+  core/       domain behavior
   adapters/   external integrations
 tests/
-Dockerfile
 ```
 
-One paragraph on key design decisions: framework choice, data flow,
-boundaries. Omit if trivial.
+Describe important data flow, trust boundaries, persisted state, and failure
+modes. Omit this section only for trivial libraries.
 
 ## Quick start
 
 ```bash
 git clone https://github.com/sklabstudio/<repo>.git
 cd <repo>
+
+# Replace with the tested setup command.
+# Replace with the tested run command.
 ```
 
-### Local
+Expected result: describe the visible output, exit code, port, or generated
+artifact that confirms the quick start worked.
 
-```bash
-# Python example — replace with actual stack
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python -m src.main
-```
+## Configuration
 
-### Docker
+| Variable | Required | Purpose | Secret |
+| :--- | :---: | :--- | :---: |
+| `EXAMPLE_URL` | No | Optional service endpoint | No |
+| `EXAMPLE_API_KEY` | For live use | Provider authentication | Yes |
 
-```bash
-docker build -t <repo> .
-docker run --rm -p 8000:8000 <repo>
-```
-
-Open http://localhost:8000.
+Provide `.env.example` with names and safe placeholders only. Never commit real
+credentials or print them in logs.
 
 ## Usage
 
-Minimal working examples. Prefer copy-pasteable code.
+Show the smallest real example. Prefer copy-pasteable commands with expected
+output over screenshots or marketing prose.
 
 ```bash
-curl -s http://localhost:8000/health
+<command>
 ```
 
-```python
-import httpx
+## Verification
 
-r = httpx.get("http://localhost:8000/health")
-print(r.json())
+```bash
+# lint / typecheck
+<command>
+
+# tests
+<command>
+
+# build or package verification
+<command>
 ```
 
-## API
+Describe what each command proves and what it does not prove. Link to CI when a
+workflow exists.
 
-| Method | Path | Description |
-| --- | --- | --- |
-| GET | `/health` | Health check |
-| GET | `/v1/example` | Short description |
+## Security and permissions
 
-Link to full reference (e.g. `/docs`) if available.
+- Filesystem access: …
+- Network access: …
+- Command execution: …
+- Credential handling: …
+- Approval boundary: …
+- Vulnerability reporting: …
+
+For security tooling, state the authorization requirement prominently.
+
+## Limitations
+
+- Known unsupported case
+- Operational constraint
+- Intentional non-goal
 
 ## Development
 
-```bash
-# setup
-pip install -r requirements.txt -r requirements-dev.txt
+Document the supported runtime versions, dependency manager, formatting,
+testing, and contribution commands. Commands in this section must match CI.
 
-# run in dev mode
-python -m src.main --reload
+## Release policy
 
-# lint / format (adjust to stack)
-ruff check . && ruff format --check .
-```
-
-## Testing
-
-```bash
-pytest -q
-```
-
-Describe what is covered and what is not.
-
-## Docker
-
-- Base image and why
-- Required env vars (list, no secrets)
-- Volumes / ports
-
-```bash
-docker build -t <repo> .
-docker run --rm -p 8000:8000 \
-  -e ENV=prod \
-  <repo>
-```
+State versioning, compatibility, migration, and support expectations. Do not use
+`stable` or `production-ready` without evidence that supports those labels.
 
 ## Roadmap
 
-- [ ] Next meaningful milestone
-- [ ] Following milestone
-- [ ] Non-goals
+- [ ] Next meaningful capability
+- [ ] Reliability or verification milestone
+- [ ] Documentation or distribution milestone
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+`<License>` — see [LICENSE](./LICENSE).

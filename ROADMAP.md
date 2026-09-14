@@ -1,66 +1,97 @@
 # SKLab Studio — Roadmap
 
-This document describes the intended structure of the `sklabstudio`
-GitHub account. It is a plan, not a promise. Repositories are created
-only when there is real, documented work to put in them.
+This roadmap describes the intended direction of the SKLab ecosystem. It is a
+working plan, not a promise of features or release dates.
 
-A clean account with a few strong repositories beats many empty ones.
+## Product tracks
 
-## Intended account structure
+### SKLab Studio
 
-```text
-sklabstudio/sklabstudio
-  Profile and brand. This repository.
-  README, BRAND, ROADMAP, assets, templates.
+A personal, long-term agent engineering platform: local-first execution,
+reproducible environments, explicit approvals, and evidence-backed outcomes.
+It is developed independently of hackathon deadlines.
 
-sklabstudio/experiments
-  Small experimental builds and proofs of concept.
-  Quick, scoped, documented. May graduate to standalone repos.
+### APIVouch
 
-sklabstudio/opencode-lab
-  OpenCode prompts, workflows, skills, and experiments.
-  Reusable developer infrastructure for agent-assisted work.
+A focused API verification agent and the XAgent hackathon submission. APIVouch
+may integrate with SKLab components, but it keeps its own product story,
+release path, deployment, and submission requirements.
 
-sklabstudio/starters
-  Reusable software starters and boilerplates.
-  Only what is actually reused. No generic template dumps.
+## Current system map
 
-Standalone high-quality products
-  Each gets its own repository with its own README,
-  quick start, tests, and license. See templates/project-readme.md.
-```
+| Layer | Repositories |
+| :--- | :--- |
+| Control | `web-ui`, `sklab-cli` |
+| Coordination | `orchestrator`, `agent-adapters`, `provider-connections` |
+| Context and skills | `repo-context`, `skill-hub`, `coding-lab` |
+| Execution | `reprobox`, `starters` |
+| Verification | `patchbench`, `benchsuite`, `promptbench`, `codetrials` |
+| Specialist tools | `contract-toolkit`, `cyber-pack` |
+| Private intelligence | `appsec-lab`, `protocol-intelligence` |
+| Focused product | `apivouch` |
+| Profile and standards | `sklabstudio` |
 
-## Principles
+The repository count is not a success metric. Integration quality, reliable
+execution, and daily usefulness matter more than adding another module.
 
-1. Publish when usable. A repo is public when it has a README,
-   a quick start, and a defined status.
-2. One repo, one job. No monoliths of unrelated scripts.
-3. Templates first. New repos start from `templates/`.
-4. Archive honestly. Dead experiments are marked as such, not deleted silently.
+## Open-core boundary
 
-## Phases
+Keep public:
 
-### Phase 1 — Foundation (now)
+- local single-user control surfaces and orchestration interfaces;
+- agent/provider adapters, context, skills, and reproducible execution tools;
+- reusable evaluation tools, schemas, examples, and starter projects;
+- the public APIVouch implementation required for distribution and review.
 
-- [x] Profile repository with README, brand, and wordmark
-- [x] README templates for experiments and projects
-- [ ] Publish first `experiments` entries
-- [ ] Publish `opencode-lab` with actually-used workflows
+Keep private:
 
-### Phase 2 — Prototypes
+- advanced AppSec and protocol intelligence logic;
+- proprietary rules, datasets, scoring, and client engagement data;
+- future multi-tenant cloud control plane, billing, and enterprise policy;
+- secrets, credentials, operational telemetry, and internal deployment state.
 
-- First small tools that solve a real problem
-- Each with quick start, limitations, and license
-- Promote only the ones worth maintaining
+Repository visibility and license are separate decisions. Every repository must
+carry an explicit license appropriate to its boundary.
 
-### Phase 3 — Standalone products
+## Milestones
 
-- Individual repositories per product
-- Proper versioning, testing, Docker where relevant
-- Featured in profile README → Current lab
+### 1. Foundation — complete
 
-## Explicitly not doing
+- [x] Profile, brand guide, roadmap, and README templates
+- [x] Agent, provider, context, skill, sandbox, and verification boundaries
+- [x] CLI and browser control surfaces
+- [x] Public repository documentation and CI baselines
+- [x] Separate APIVouch product identity
 
-- Creating dozens of empty repositories to look active
-- Claiming expertise, users, or traction before it exists
-- Adding stats widgets, counters, or trophy boards to the profile
+### 2. Daily-driver runtime — next
+
+- [ ] Run one real repository task end to end from the Web UI
+- [ ] Persist sessions, decisions, evidence, and resumable task state
+- [ ] Install and permission MCP servers and skills through one workflow
+- [ ] Support long-running jobs, cancellation, retry, and scheduling
+- [ ] Provide one-command local setup and a reliable doctor command
+- [ ] Replace remaining demo paths with clearly verified live execution
+
+### 3. Reliability and learning
+
+- [ ] Add regression suites for complete cross-repository workflows
+- [ ] Add durable memory with explicit scope, retention, and deletion controls
+- [ ] Measure agent/provider results using frozen tasks and reproducible receipts
+- [ ] Add failure recovery, backup, migration, and compatibility policies
+- [ ] Dogfood SKLab on its own repositories and record recurring failures
+
+### 4. Optional distribution
+
+- [ ] Publish documentation at `sklab.cc`
+- [ ] Package supported local installers and signed releases
+- [ ] Define community contribution and security-reporting processes
+- [ ] Evaluate an optional hosted control plane without weakening local-first use
+
+## Decision rules
+
+1. Improve an existing execution path before creating another repository.
+2. A green health check proves availability, not task success.
+3. No feature is complete without an expected result and a verification path.
+4. Keep private capability boundaries private in code, fixtures, logs, and docs.
+5. Archive abandoned experiments honestly; do not preserve misleading status.
+6. Keep SKLab's long-term roadmap separate from APIVouch's hackathon timeline.
