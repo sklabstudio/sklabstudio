@@ -41,7 +41,9 @@ Inspired by Linear, Vercel, Stripe developer tools, Cloudflare:
 whitespace, typography, restraint.
 
 - Monochrome / neutral palette. Works in GitHub light and dark mode.
-- One wordmark: `assets/sklab-studio.svg`. No alternate logos without reason.
+- One wordmark: `assets/sklab-studio.svg`.
+- One compact avatar derived from the same mark: `assets/sklab-avatar.svg`
+  with a ready-to-upload `assets/sklab-avatar.png` export.
 - Plain text over badges. If badges are used, keep to build/license status only.
 - Tables and separators only when they improve readability.
 - No external fragile image dependencies. SVG + Markdown only.

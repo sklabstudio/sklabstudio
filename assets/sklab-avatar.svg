@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">SKLab Studio</title>
+  <desc id="desc">A terminal prompt mark for SKLab Studio.</desc>
+
+  <rect width="512" height="512" rx="112" fill="#09090b"/>
+  <rect x="101" y="101" width="310" height="310" rx="78" fill="none" stroke="#fafafa" stroke-width="16"/>
+
+  <path d="M180 199l61 57-61 57" fill="none" stroke="#fafafa" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M268 313h70" fill="none" stroke="#fafafa" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="370" cy="142" r="14" fill="#22c55e"/>
+</svg>
