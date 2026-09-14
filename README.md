@@ -1,90 +1,83 @@
 <p align="center">
-  <img src="./assets/sklab-studio.svg" width="640" alt="SKLab Studio — independent software experiments, AI tools and developer infrastructure" />
+  <img src="./assets/sklab-studio.svg" width="760" alt="SKLab Studio — build agents, verify outcomes" />
 </p>
 
-# SKLab Studio
-
-Independent software experiments, AI tools,
-developer infrastructure & automation.
-
-This is a working software lab. Ideas are turned into usable prototypes,
-developer tools, and small, well-scoped experiments. Build. Test. Ship.
+<p align="center">
+  <a href="https://sklab.cc">Website</a> ·
+  <a href="https://github.com/sklabstudio?tab=repositories">Repositories</a> ·
+  <a href="https://github.com/sklabstudio/apivouch">APIVouch</a>
+</p>
 
 ---
 
-## What I build
+## Build agents. Verify outcomes.
 
-- AI agents and agent-adjacent tooling
-- MCP and tool interoperability experiments
-- APIs and backend systems
-- Automation and workflow tooling
-- Developer utilities and reusable components
-- Small experimental software, published as it becomes usable
+SKLab Studio is an independent engineering lab building local-first AI-agent
+infrastructure, developer tools, and reproducible verification systems.
 
-Scope grows as projects are published. Nothing here is claimed before it exists.
+The current focus is a single control plane for giving an agent a bounded task,
+running it in a controlled environment, and returning evidence that can be
+reviewed before a result is accepted.
 
-## SKLab Verified Agent platform
+<p align="center">
+  <img src="./assets/verified-agent-loop.svg" width="920" alt="SKLab verified agent workflow: define, prepare, execute, verify, review" />
+</p>
 
-The current focus is one local-first engineering agent that routes work to a
-compatible coding agent, injects provider credentials only at execution time,
-runs work in reproducible environments, and verifies patches before reporting
-success.
+| Local first | Evidence over claims | Human controlled |
+| :--- | :--- | :--- |
+| Work stays close to the repository and its tools. | Tests, builds, diffs, and receipts determine success. | Sensitive actions remain explicit and reviewable. |
 
-```text
-CLI / Web UI / MCP client
-          |
-     Orchestrator
-    /     |       \
-Context  Skills  Providers + Agents
-    \     |       /
-       ReproBox
-          |
-       PatchBench
-          |
-  evidence-backed result
-```
+## Featured work
 
-### Featured repositories
+| Project | What it does |
+| :--- | :--- |
+| **[Orchestrator](https://github.com/sklabstudio/orchestrator)** | Coordinates context, agents, providers, environments, retries, and verification. |
+| **[Agent Adapters](https://github.com/sklabstudio/agent-adapters)** | Provides one normalized interface for discovering and controlling coding agents. |
+| **[ReproBox](https://github.com/sklabstudio/reprobox)** | Runs work in reproducible environments and records execution receipts. |
+| **[PatchBench](https://github.com/sklabstudio/patchbench)** | Verifies generated patches with tests, builds, and diff analysis. |
+| **[RepoContext](https://github.com/sklabstudio/repo-context)** | Turns a codebase into deterministic, AI-ready context. |
+| **[Web UI](https://github.com/sklabstudio/web-ui)** | Provides the browser-based human control plane for the integrated stack. |
 
-| Project | Role |
-| --- | --- |
-| [Orchestrator](https://github.com/sklabstudio/orchestrator) | Plans, routes, retries, and coordinates verified runs |
-| [Agent Adapters](https://github.com/sklabstudio/agent-adapters) | Normalized discovery and execution contract for coding agents |
-| [Provider Connections](https://github.com/sklabstudio/provider-connections) | Secret-safe provider configuration and runtime injection |
-| [RepoContext](https://github.com/sklabstudio/repo-context) | Deterministic, local repository context |
-| [Skill Hub](https://github.com/sklabstudio/skill-hub) | Versioned skill discovery, trust, permissions, and routing |
-| [ReproBox](https://github.com/sklabstudio/reprobox) | Reproducible execution environments and receipts |
-| [PatchBench](https://github.com/sklabstudio/patchbench) | Objective patch and regression verification |
-| [Web UI](https://github.com/sklabstudio/web-ui) | Human control plane for the integrated stack |
-| [BenchSuite](https://github.com/sklabstudio/benchsuite) | Frozen benchmark tasks with hidden verification |
+<details>
+<summary><strong>Explore the wider system</strong></summary>
 
-The platform is under active integration hardening. Mock/demo execution is
-explicitly labelled; availability is never reported as proof of execution.
+<br />
 
-## Engineering interests
+| Area | Projects |
+| :--- | :--- |
+| Control | [SKLab CLI](https://github.com/sklabstudio/sklab-cli) · [Web UI](https://github.com/sklabstudio/web-ui) |
+| Agent runtime | [Orchestrator](https://github.com/sklabstudio/orchestrator) · [Agent Adapters](https://github.com/sklabstudio/agent-adapters) · [Provider Connections](https://github.com/sklabstudio/provider-connections) |
+| Context & execution | [RepoContext](https://github.com/sklabstudio/repo-context) · [Skill Hub](https://github.com/sklabstudio/skill-hub) · [ReproBox](https://github.com/sklabstudio/reprobox) |
+| Evaluation | [PatchBench](https://github.com/sklabstudio/patchbench) · [BenchSuite](https://github.com/sklabstudio/benchsuite) · [PromptBench](https://github.com/sklabstudio/promptbench) · [CodeTrials](https://github.com/sklabstudio/codetrials) |
+| Engineering tools | [Coding Lab](https://github.com/sklabstudio/coding-lab) · [Contract Toolkit](https://github.com/sklabstudio/contract-toolkit) · [Cyber Pack](https://github.com/sklabstudio/cyber-pack) · [Starters](https://github.com/sklabstudio/starters) |
 
-Agent infrastructure · Tool interoperability · API design ·
-Automation · Reliability · Developer experience · Experimental software
+</details>
+
+## APIVouch
+
+**[APIVouch](https://github.com/sklabstudio/apivouch)** routes an agent goal across
+independent APIs and returns a verified outcome with content-addressed evidence
+receipts. It is a focused product, separate from the long-term SKLab platform.
+
+`Build` → `Verify` → `MCPize` → `Monetize`
+
+## Engineering standard
+
+- Publish working code with a defined scope, setup path, and honest limitations.
+- Treat availability as a signal, never as proof that execution succeeded.
+- Prefer deterministic checks and reproducible environments over confident prose.
+- Keep credentials out of repositories and inject them only when execution needs them.
+- Separate experiments from stable interfaces; archive work that is no longer maintained.
 
 ## Stack
 
 `Python` · `FastAPI` · `TypeScript` · `Next.js` · `Docker` · `Git` · `REST` · `MCP`
 
-Small, boring, proven — chosen to ship and maintain.
+Small, proven components. Clear boundaries. Results that can be inspected.
 
-## Open source & experiments
+---
 
-This account will contain:
-
-- working prototypes
-- reusable components
-- experiments and proofs of concept
-- developer tooling
-- research-driven builds
-
-A clean account with a few strong repositories is the goal. No filler repos.
-
-## Links
-
-- Website: https://sklab.cc
-- GitHub: https://github.com/sklabstudio
+<p align="center">
+  <a href="https://sklab.cc">sklab.cc</a><br />
+  <sub>Independent software experiments, AI tools, and developer infrastructure.</sub>
+</p>

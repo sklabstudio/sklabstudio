@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="sklab-title sklab-desc">
   <title id="sklab-title">SKLab Studio</title>
-  <desc id="sklab-desc">SKLab Studio — independent software experiments, AI tools and developer infrastructure.</desc>
+  <desc id="sklab-desc">SKLab Studio — build agents, verify outcomes.</desc>
   <style>
     .mark-box { fill: none; stroke: #111111; stroke-width: 2.5; }
     .mark-glyph { fill: #111111; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; font-size: 30px; font-weight: 600; }
@@ -29,7 +29,7 @@
   <text class="wordmark" x="600" y="210" text-anchor="middle">SKLab Studio</text>
 
   <!-- subtitle -->
-  <text class="sub" x="600" y="252" text-anchor="middle">Independent software experiments, AI tools &#38; developer infrastructure</text>
+  <text class="sub" x="600" y="252" text-anchor="middle">Build agents. Verify outcomes.</text>
 
   <!-- subtle rule -->
   <line class="rule" x1="520" y1="286" x2="680" y2="286"/>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">SKLab verified agent workflow</title>
+  <desc id="desc">A five-stage workflow from defining a task through preparing context, executing with an agent, verifying the result, and human review.</desc>
+  <style>
+    .panel { fill: #ffffff; stroke: #d4d4d8; stroke-width: 1.5; }
+    .index { fill: #18181b; }
+    .index-text { fill: #ffffff; font: 600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .label { fill: #18181b; font: 650 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .detail { fill: #71717a; font: 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .connector { fill: none; stroke: #a1a1aa; stroke-width: 1.5; }
+    .receipt { fill: #f4f4f5; stroke: #d4d4d8; stroke-width: 1; }
+    .receipt-text { fill: #52525b; font: 500 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .4px; }
+    @media (prefers-color-scheme: dark) {
+      .panel { fill: #09090b; stroke: #3f3f46; }
+      .index { fill: #fafafa; }
+      .index-text { fill: #09090b; }
+      .label { fill: #fafafa; }
+      .detail { fill: #a1a1aa; }
+      .connector { stroke: #52525b; }
+      .receipt { fill: #18181b; stroke: #3f3f46; }
+      .receipt-text { fill: #d4d4d8; }
+    }
+  </style>
+
+  <path class="connector" d="M228 127H252 M468 127H492 M708 127H732 M948 127H972"/>
+  <path class="connector" d="M240 122l10 5-10 5M480 122l10 5-10 5M720 122l10 5-10 5M960 122l10 5-10 5"/>
+
+  <g transform="translate(12 60)">
+    <rect class="panel" width="216" height="134" rx="12"/>
+    <circle class="index" cx="28" cy="28" r="14"/>
+    <text class="index-text" x="28" y="33" text-anchor="middle">01</text>
+    <text class="label" x="22" y="73">Define</text>
+    <text class="detail" x="22" y="101">Bounded task</text>
+    <text class="detail" x="22" y="122">Explicit constraints</text>
+  </g>
+
+  <g transform="translate(252 60)">
+    <rect class="panel" width="216" height="134" rx="12"/>
+    <circle class="index" cx="28" cy="28" r="14"/>
+    <text class="index-text" x="28" y="33" text-anchor="middle">02</text>
+    <text class="label" x="22" y="73">Prepare</text>
+    <text class="detail" x="22" y="101">Repository context</text>
+    <text class="detail" x="22" y="122">Skills + provider</text>
+  </g>
+
+  <g transform="translate(492 60)">
+    <rect class="panel" width="216" height="134" rx="12"/>
+    <circle class="index" cx="28" cy="28" r="14"/>
+    <text class="index-text" x="28" y="33" text-anchor="middle">03</text>
+    <text class="label" x="22" y="73">Execute</text>
+    <text class="detail" x="22" y="101">Compatible agent</text>
+    <text class="detail" x="22" y="122">Isolated workspace</text>
+  </g>
+
+  <g transform="translate(732 60)">
+    <rect class="panel" width="216" height="134" rx="12"/>
+    <circle class="index" cx="28" cy="28" r="14"/>
+    <text class="index-text" x="28" y="33" text-anchor="middle">04</text>
+    <text class="label" x="22" y="73">Verify</text>
+    <text class="detail" x="22" y="101">Tests + build + diff</text>
+    <text class="detail" x="22" y="122">Evidence receipt</text>
+  </g>
+
+  <g transform="translate(972 60)">
+    <rect class="panel" width="216" height="134" rx="12"/>
+    <circle class="index" cx="28" cy="28" r="14"/>
+    <text class="index-text" x="28" y="33" text-anchor="middle">05</text>
+    <text class="label" x="22" y="73">Review</text>
+    <text class="detail" x="22" y="101">Human approval</text>
+    <text class="detail" x="22" y="122">Accepted outcome</text>
+  </g>
+
+  <g transform="translate(318 238)">
+    <rect class="receipt" width="564" height="42" rx="21"/>
+    <text class="receipt-text" x="282" y="26" text-anchor="middle">TASK → RUN → CHECKS → RECEIPT → DECISION</text>
+  </g>
+</svg>
